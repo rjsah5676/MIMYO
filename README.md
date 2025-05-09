@@ -6,6 +6,8 @@
 
 ---
 
+📄 [프로젝트 상세 소개서 보기 (PDF)]([https://drive.google.com/file/d/파일ID/view?usp=sharing)](https://drive.google.com/file/d/1ZVTpuval2WbT_x1n-3tOS7dhkpnCJQ8C/view?usp=drive_link)
+
 ## 🛠️ 주요 기술 스택
 
 ### 📌 Frontend
