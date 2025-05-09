@@ -2,7 +2,7 @@
 
 > 정성 가득한 핸드메이드 상품을 거래하는 커머스 플랫폼
 
-![main page preview](./preview.png) <!-- 스크린샷 경로는 알아서 수정 -->
+![main page preview](./mimyo.jpg) <!-- 스크린샷 경로는 알아서 수정 -->
 
 ---
 
