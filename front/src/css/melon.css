@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+#blocking{
+    height:1200px;
+}
+
+#melon-wrap{
+    position: absolute;
+    left:20%;
+    top:200px;
+}
+
+#melon-container {
+    display: flex;
+    width:1030px;
+    margin-bottom: 30px;
+    font-family: "Jua", serif;
+}
+
+#rankBox {
+    padding:10px;
+    color:black;
+    background:rgba(156, 227, 255, 0.068);
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.2),
+    7px 7px 20px 0px rgba(0,0,0,.3),
+    4px 4px 5px 0px rgba(0,0,0,.3);
+    width:40%;
+    border-radius: 7px;
+}
+
+#rank-title {
+    font-size:25px;
+    padding-left:20px;
+}
+#rank-info {
+    font-size:20px;
+    padding-left:30px;
+    padding-bottom:5px;
+}
+
+#melon-box {
+    color:black;
+    padding:10px;
+    margin-left: 5%;
+    background:rgba(156, 227, 255, 0.068);
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.2),
+    7px 7px 20px 0px rgba(0,0,0,.3),
+    4px 4px 5px 0px rgba(0,0,0,.3);
+    width:55%;
+    border-radius: 7px;
+}
+
+#melon-title {
+    font-size:25px;
+    padding-left:20px;
+}
+#melon-text {
+    font-size:20px;
+    padding-top:20px;
+    padding-left:40px;
+    padding-bottom:5px;
+}

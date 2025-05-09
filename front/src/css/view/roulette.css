@@ -1,0 +1,114 @@
+.roulette-background {
+    background: linear-gradient(to right, #fff6e5, #fcb6b6);
+    min-height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .roulette-card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+  }
+  
+  .roulette-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #e91e63;
+    margin-bottom: 5px;
+  }
+  
+  .roulette-desc {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .roulette-container {
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .roulette-canvas {
+    pointer-events: none;
+  }
+  
+  .roulette-needle {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 24px solid red;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+  
+  .roulette-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    padding: 20px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .roulette-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .roulette-modal {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+  }
+  
+  .roulette-modal-title {
+    font-size: 28px;
+    color: #e91e63;
+  }
+  
+  .roulette-modal-result {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .roulette-modal-sub {
+    margin-top: 5px;
+  }
+  
+  .roulette-modal-button {
+    background-color: #e91e63;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  

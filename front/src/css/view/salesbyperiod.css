@@ -1,0 +1,140 @@
+.sales-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.top-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.year-controls {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.year-controls button {
+  font-size: 20px;
+  background-color: #ddd;
+  border: none;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.year-controls button:hover {
+  background-color: #8CC7A5;
+  color: white;
+}
+
+.month-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+}
+
+.month-buttons button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 3px;
+}
+
+.month-buttons .selected {
+  background-color: #8CC7A5;
+  color: white;
+  font-weight: bold;
+}
+
+.chart-and-table {
+  display: grid;
+  grid-template-columns: 49% 51%;
+  gap: 16px;
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 16px;
+  border: 1px solid #ccc;
+  height: 820px;
+  overflow-x: hidden;
+}
+
+.chartSection {
+  background-color: #fafafa;
+  padding: 16px;
+  border: 1px solid #ccc;
+}
+
+.sales-table {
+  width: 100% !important;
+  border-collapse: collapse;
+}
+
+.sales-table thead {
+  background-color: #efefef;
+}
+.sales-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #ddd; 
+  z-index: 1;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+}
+.sales-table th,
+.sales-table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sales-table tr:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.table-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  position: relative;
+  padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .chart-and-table {
+    grid-template-columns: 1fr;
+  }
+
+  .right-panel {
+    height: auto !important;
+    overflow-x: auto; 
+  }
+
+  .table-wrapper {
+    max-height: 600px;
+  }
+}

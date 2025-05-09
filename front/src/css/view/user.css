@@ -1,0 +1,653 @@
+.login-wrapper {
+    position: fixed;
+    top: 0;
+    right: -380px;
+    width: 360px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease-in-out;
+}
+
+.login-wrapper.show {
+    right: 0;
+}
+
+.login-container {
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    margin-top:-50px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-wrapper input {
+    width: 80%;
+    padding: 10px 13px 10px 35px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-wrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.login-container button:hover {
+    background: white;
+    color: black;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 33px;
+    cursor: pointer;
+    color: white;
+}
+
+.login-logo {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.kakao-login {
+    background-color: #FEE500;
+    color: #3C1E1E;
+    border: none;
+    font-size: 14px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.kakao-login:hover {
+    background-color: #FAD400;
+}
+
+.google-login {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.google-login:hover {
+    background-color: #f1f1f1;
+}
+
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.login-links span {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.login-links span:hover {
+    color: white;
+}
+
+.input-status {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.valid {
+    color: #4CAF50;
+}
+
+.invalid {
+    color: #FF3D00;
+}
+
+/* ===== sign up ===== */
+.sign-up-container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+.terms {
+    padding: 10px 0;
+}
+.terms h4 {
+    margin: 0;
+    margin-top: 30px;
+    font-size: 1.1em;
+}
+.terms-title {
+    font-weight: bold;
+}
+.terms-box {
+    height: 300px;
+    line-height: 1.6;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 12pt;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+}
+#terms-alert {
+    color: #f44;
+    padding: 10px 20px;
+    font-size: 11pt;
+    display: none;
+}
+#terms-next {
+    width: 60px;
+    height: 30px;
+    margin: 30px auto;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sign-up-form {
+    width: 600px;
+    margin: 0 auto;
+}
+.sign-up-form label, .sign-up-form input {
+    display: inline-block;
+    width: 25%;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px;
+    padding: 5px;
+}
+.sign-up-form label {
+    font-weight: bold;
+}
+.sign-up-form input,
+.sign-up-form textarea {
+    width: 65%;
+    border: 1px solid #555;
+    border-radius: 10px;
+}
+.sign-up-form input[name=userid], #verification-code {
+    width: calc(65% - 85px);
+}
+.sign-up-form input[name=email] {
+    width: calc(65% - 96px);
+}
+
+#signup-btn {
+    display: block;
+    width: 600px;
+    height: 40px;
+    margin: auto;
+    margin-top: 60px;
+    color: #fff;
+    background-color: #222;
+    border: none;
+    border-radius: 10px;
+    font-size: 12pt;
+    cursor: pointer;
+}
+#signup-btn:hover, #postcode:hover, #profile-image-btn:hover, #duplicate-check-btn:hover,
+#email-verification-btn:hover, #verification-btn:hover {
+    background-color: #fff;
+    color: #222;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+}
+
+.info-box-style{
+    display: flex; 
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+input.tel {
+    width: 110px;
+}
+
+.new-pwd-style{
+    text-align: right;
+    font-size: 14px; 
+    margin-top: 10px; 
+    cursor: pointer;
+}
+
+/* 회원가입 반응형 */
+@media screen and (max-width: 768px) {
+    .sign-up-container{
+        width: 95%;
+    }
+
+    .sign-up-form {
+        width: 90%;
+    }
+
+    .sign-up-form label,
+    .sign-up-form input,
+    .sign-up-form textarea {
+        width: 100%;
+    }
+
+    .form-alert {
+        margin-left: 0px !important;
+    }
+
+    .sign-up-form input[name=userid],
+    .sign-up-form input[name=zipcode],
+    .sign-up-form input[name=email]{
+        width: 60% !important;
+    }
+    
+    .sign-up-form input[name=username],
+    .sign-up-form input[name=userpw],
+    .sign-up-form input[name=userpwCheck],
+    .sign-up-form input[name=address],
+    .sign-up-form input[name=addressDetail]
+    {
+        width: 90%;
+    }
+
+    #verification-code{
+        margin: 5px !important;
+    }
+
+    .sign-up-form input[name=tel1],
+    .sign-up-form input[name=tel2],
+    .sign-up-form input[name=tel3]{
+        width: 24%; 
+
+    }
+
+    #duplicate-check-btn, #postcode, #email-verification-btn{
+        width: 24%;
+        height: 40px !important; 
+    }
+    
+
+    #profile-image-btn{
+        margin: 0 !important;
+        width: 30% !important;
+        height: 35px !important;
+        display: flex;
+        justify-content: center;  /* 좌우 가운데 정렬 */
+        align-items: center;      /* 위아래 가운데 정렬 */
+        text-align: center;       /* 텍스트 여러 줄일 경우 중앙 정렬 */
+    }
+
+    .info-box-style {
+        margin-top: 70px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px;
+        width: 90%;
+    }
+
+    #signup-btn{
+        width: 95%;
+        padding: 0;
+    }
+
+    .form-alert{
+        padding-left: 5px;
+        font-size: 11px !important;
+    }
+}
+
+#profile-img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    padding: 10px;
+}
+.form-alert {
+    margin-left: 30%;
+    line-height: 1.6;
+    font-size: 9pt;
+    font-weight: bold;
+    color: #f37373;
+}
+#postcode, #profile-image-btn, #duplicate-check-btn, #email-verification-btn, #verification-btn {
+    margin-left: 10px;
+    height: 30px;
+    padding: 0 10px;
+    background-color: #222;
+    color: #fff;
+    font-size: 9pt;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#profile-image-btn {
+    position: relative;
+    top: 25px;
+    left: 48%;
+    width: 60px;
+    padding: 0 5px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.already-container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+.message-box {
+    width: 350px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.id-find{
+    margin-right: 15px;
+}
+
+.id-find:hover, .pw-find:hover{
+    color: rgb(146, 141, 141);
+    cursor: pointer;
+}
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db; /* 파란색 회전 */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 개인정보 수정 반응형 */
+@media screen and (max-width: 768px) {
+    #info-edit-id, #info-edit-email{
+        width: 90% !important;
+    }
+
+    .new-pwd-style{
+        margin-right: 20px;
+    }
+
+    #currentUserPw, #modUserPw, #modUserPwCheck{
+        width: 92% !important;
+    }
+    #profile-img {
+        top: 50px;
+        left: 0px;
+    }
+}
+
+/* ========== Mypage Profile ========== */
+.profile-top, .profile-menu {
+    border: 1px solid #ccc;
+    padding: 30px;
+    margin: 20px auto;
+    font-size: 10pt;
+}
+.profile-top{
+    max-width: 750px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.profile-info {
+    width: 100%;
+    padding: 0;
+}
+.profile-follow {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+#profile-info-text {
+    margin: 5px auto 15px;
+}
+
+#follow-btn, #unfollow-btn, #userinfo-chatting, #profile-edit-btn {
+    display: inline;
+    height: 40px;
+    padding: 0 20px;
+    background-color: #52a575;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+}
+#unfollow-btn {
+    background-color: #d1e2d7;
+}
+#follow-btn:hover, #unfollow-btn:hover {
+    background-color: #8CC7A5;
+}
+.profile-menu {
+    display: flex;
+    justify-content:center;
+    padding: 10px;
+    margin-bottom: 0;
+    
+}
+.profile-menu div {
+    cursor: pointer;
+    margin: 0 8%;
+}
+.selected-menu {
+    font-weight: bold;
+    color: #419c67;
+}
+.profile-bottom {
+    border: 1px solid #ddd;
+}
+/* ========== Guestbook ========== */
+.guestbook-item {
+    position: relative;
+    max-width: 800px;
+    margin: 30px 10px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+#writer-profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius:100%;
+}
+#writer-name {
+    position: relative;
+    top: -20px;
+    left: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+#guestbook-content {
+    position: relative;
+    background-color: #d1e2d7;
+    line-height: 1.4;
+    margin: 20px 10px;
+    padding: 20px;
+    border-radius: 10px;
+    white-space: pre-line;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+.guestbook-delete-btn {
+    position: absolute;
+    top: -6px;
+    right: -4px;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    background-color: rgb(255, 113, 113);
+    border-radius: 100%;
+    cursor: pointer;
+}
+.guestbook-write-box {
+    display: flex;
+    justify-content: center;
+    max-width: 850px;
+    margin: 10px auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+}
+.guestbook-write, #guestbook-write-btn {
+    width: calc(100% - 140px);
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: 0 3px 5px rgba(31, 131, 81, 0.15);
+    transition: all 0.5s;
+    font-family: inherit;
+}
+#guestbook-write-btn {
+    width: 80px;
+    color: #333;
+    background-color: #eee;
+    font-size: 12pt;
+    cursor: pointer;
+}
+#guestbook-write-btn:hover {
+    background-color: #d1e2d7;
+}
+#guestbook-reply-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #777;
+}
+
+.guestbook-reply {
+    position: relative;
+    margin: 20px 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #eee;
+    box-shadow: 0 3px 10px rgba(37, 37, 37, 0.149);
+}
+.reply-delete-btn {
+    position: absolute;
+    right: -6px;
+    top: -8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    color: #555;
+}
+
+.blocking-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .profile-top, .profile-menu {
+        min-width: 500px;
+        display: flex;
+        font-size: 13pt;
+    }
+    .profile-bottom {
+        min-width: 500px;
+    }
+    .profile-info {
+        padding-left: 20px;
+    }
+    .profile-info div {
+        margin: 5px;
+    }
+    .guestbook-item {
+        margin: 30px auto;
+    }
+}
+
+/* 우편번호 - 반응형 */
+@media screen and (max-width: 768px) {
+    .daumpost{
+        width: 95% !important;
+    }
+    .postmodal{
+        width:98% !important;
+    }
+}

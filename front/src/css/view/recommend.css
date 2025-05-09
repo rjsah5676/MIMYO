@@ -1,0 +1,211 @@
+.recommend-container {
+    padding-top: 100px;
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+#recommend-title {
+    text-align: center;
+    font-size: 32px;
+}
+.recommend-sort {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+.recommend-sort li {
+    margin: 10px;
+    padding: 7px 10px;
+    color: #555;
+    font-size: 11pt;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    cursor: pointer;
+    min-width: 80px;
+    text-align: center;
+}
+.recommend-sort li:hover {
+    background-color: #eee;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recommend-sort li.active {
+    font-weight: bold;
+    color: #8cc7a5;
+    cursor: pointer;
+}
+
+#refresh-btn {
+    position: absolute;
+    top: 208px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    color: #fff;
+    background-color: #222;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+#refresh-btn:hover {
+    background-color: #fff;
+    color: #222;
+}
+
+#refresh-btn:active {
+    transform: scale(0.95);
+}
+.recommend-list {
+    position: relative;
+    margin: 20px 0;
+}
+
+.recommend-product {
+    position: relative;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.recommend-product:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.recommend-product-img { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recommend-grid {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 150px);
+    grid-template-areas: 
+        "b0 b0 b0 b0 b1 b1 b2 b2"
+        "b0 b0 b0 b0 b1 b1 b2 b2"
+        "b3 b3 b4 b4 b5 b5 b5 b5"
+        "b3 b3 b4 b4 b5 b5 b5 b5"
+    ;
+}
+
+.box-0 { grid-area: b0; }
+.box-1 { grid-area: b1; }
+.box-2 { grid-area: b2; }
+.box-3 { grid-area: b3; }
+.box-4 { grid-area: b4; }
+.box-5 { grid-area: b5; }
+.box-6 { grid-area: b6; }
+
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-top {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+  
+.box-0 {
+    animation: slide-in-left 0.9s ease-out forwards;
+}
+.box-1 {
+    animation: slide-in-right 1s ease-out forwards;
+}
+.box-2 {
+    animation: slide-in-top 1.1s ease-out forwards;
+}
+.box-3 {
+    animation: slide-in-left 0.9s ease-out forwards;
+}
+.box-4 {
+    animation: slide-in-bottom 1.1s ease-out forwards;
+}
+.box-5 {
+    animation: slide-in-right 1s ease-out forwards;
+}
+
+.recommend-product-info {
+    position:absolute;
+    bottom: 0px;
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.82);
+    font-size: 10pt;
+}
+.info-0, .info-5 {
+    text-align: center;
+}
+.info-0 div, .info-5 div {
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .recommend-container {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .recommend-sort {
+        flex-wrap: wrap;
+    }
+    .recommend-sort li {
+        padding: 3px 5px;
+        font-size: 10pt;
+    }
+    #recommend-title {
+        font-size: 22px;
+    }
+    #refresh-btn {
+        top: 270px;
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+}

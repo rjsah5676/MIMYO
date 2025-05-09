@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+
+@font-face {
+    font-family: 'WavvePADO-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/WavvePADO-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    margin:0;
+    padding:0;
+    user-select: none;
+
+    font-family: "Pretendard", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    background: #1b1b1b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    background: rgba(80, 80, 80, 0.9);
+}
+
+.interact-popup {
+    position: absolute;
+    background-color: #1b1b1b;
+    color:white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    z-index:2000;
+    width: 108px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.interact-exit {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ebebeb;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right:10px;
+    transition: color 0.2s;
+}
+
+.interact-exit:hover {
+    color: #cfcfcf;
+}
+
+.interact-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.interact-item {
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.interact-item:hover {
+    background-color: #f1f1f1;
+    color:#1b1b1b;
+}
+
+.interact-item:active {
+    background-color: #e0e0e0;
+    color:#1b1b1b;
+}
+.postmodal {
+    position: fixed;
+    top: 10%;
+    border: 1px solid #ddd;
+}
+.daumpost {
+    background-color: white;
+    width: 800px;
+    height: 450px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 10001;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.post-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor:pointer;
+}
+
+.editor-container__editor .ck-editor__editable_inline {
+    min-height: 400px;
+}
+
+/* 메인 이벤트 배너 */
+.image-container {
+    position: relative;
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+}
+  
+.main-text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 0 10px;
+    border-radius: 10px;
+}
+
+.main-text {
+    font-family: 'WavvePADO-Regular';
+    font-size: 2.3rem;
+    font-weight: 500;
+    text-shadow: 
+        0 0 0.3px #333,
+        0 0 0.3px #333,
+        0 0 0.3px #333;
+    letter-spacing: -0.5px; 
+    color: #333;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeSlideIn 1.5s ease-out forwards;
+    padding: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInWord 5s ease-out forwards; /* 5초로 수정 */
+    animation-delay: 3s; /* 8초 - 5초 (애니메이션 시간) = 3초 */
+    margin-right: 5px;
+    animation-iteration-count: infinite; /* 반복 */
+    animation-timing-function: ease-in-out; /* 부드럽게 반복 */
+}
+
+.highlight-circle {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 2.3rem;
+}
+
+.highlight-circle::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 0, 0, 0.6);  /* 반투명 빨간색 */
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(255, 0, 0, 0.6);
+}
+
+@keyframes fadeInWord {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+
+
+
+
+.slider-container {
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 50px;
+    
+}
+
+.slider-image-banner {
+    width: 1200px;
+    height: 375px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.slick-slide {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.slider-image-wrapper {
+    width: 95%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(3px) brightness(0.8);
+    opacity: 0.7;
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.slick-center .slider-image {
+    transform: scale(1.02);
+    transition: transform 0.5s ease;
+    filter: blur(0px) brightness(1);
+    opacity: 1;
+}
+
+
+.dots_custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dots_custom li button {
+    border: none;
+    background: #aaa;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    height: 8px;
+    width: 4vw;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.dots_custom li.slick-active button {
+    background-color: rgb(75, 74, 74);
+}
+
+.dots_custom li {
+    list-style: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 6px;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .slider-image-banner {
+        width: 100%;
+        height: 250px;
+    }
+
+    .slider-image-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .slider-image {
+        filter: none;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .slick-center {
+        opacity: 1 !important;
+    }
+}
+
+.event-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
+    background: linear-gradient(135deg, rgba(40, 40, 40, 0.9), rgba(70, 70, 70, 0.9));  /* 더 진한 색상 */
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.event-button:hover {
+    background: linear-gradient(135deg, rgba(60, 60, 60, 0.9), rgba(100, 100, 100, 0.9));  /* 호버 시 더 진한 색상 */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.main-coupon-badge {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    background: linear-gradient(135deg, #FFD700, #FF6347);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: pulse 1.5s infinite alternate;
+}
+
+.event-date-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.35);
+    color: #222;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.3px;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .event-button {
+        bottom: 12px;
+        right: 12px;
+        font-size: 12px;
+        padding: 8px 12px;
+        border-radius: 16px;
+    }
+
+    .main-coupon-badge {
+        top: 10px;
+        right: 12px;
+        font-size: 12px;
+        padding: 6px 10px;
+        border-radius: 8px;
+    }
+
+    .event-date-badge {
+        top: 8px;
+        left: 8px;
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-button {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+    .main-coupon-badge {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+    .event-date-badge {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+}
+
+/* 메인 이벤트 배너 끝 */
+
+/* 메인 문구 반응형 */
+.mimyo-main-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    padding: 40px 20px;
+    border-bottom: 1px solid #e0dcd5;
+    font-family: 'Pretendard', sans-serif;
+    text-align: center;
+  }
+  
+  .mimyo-main-title {
+    font-size: 32px;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+  }
+  
+  .mimyo-main-subtext {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .mimyo-main-highlight {
+    font-weight: 600;
+    color: #8CC7A5;
+  }
+  
+  @media (max-width: 768px) {
+    .mimyo-main-title {
+      font-size: 22px;
+    }
+  
+    .mimyo-main-subtext {
+      font-size: 14px;
+      padding: 0 10px;
+    }
+  }
+
+
+/* 로딩 스피너 */
+.spinner, .recommend-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #1b1b1b;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+  }
+
+  .recommend-spinner {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 15px);
+}
+  
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+  /* 로딩 스피너 끝 */
+
+  /* 삭제모달 */
+.deletemodal-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.deletemodal-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.deletemodal-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.deletemodal-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.deletemodal-btn.delete {
+    background-color: #e74c3c;
+    color: white;
+}
+  
+.deletemodal-btn.cancel {
+    background-color: #bdc3c7;
+    color: black;
+}
+
+/* 삭제모달 끝 */
+
+/* 달력 */
+.custom-calendar {
+    background-color: white;
+    border: 2px solid #8CC7A5;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+.react-datepicker__day:hover {
+    background-color: #8CC7A5;
+    color: white;
+}
+
+.react-datepicker__day--today {
+    font-weight: bold;
+    color: #8CC7A5;
+}
+/* 달력 끝 */

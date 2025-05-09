@@ -1,0 +1,74 @@
+
+.adminmember-page {
+    background-color: #f9fafb;
+    min-height: 100vh;
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .adminmember-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .adminmember-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    text-align: center;
+  }
+  
+  .adminmember-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+  }
+  .adminmember-section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 16px;
+  }
+  .adminmember-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  
+  .adminmember-table th,
+  .adminmember-table td {
+    border: 1px solid #e5e7eb;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .adminmember-table thead {
+    background-color: #f3f4f6;
+    font-weight: 600;
+  }
+  .adminmember-table tfoot{
+    background-color: #f3f4f6;
+    font-weight: 600;
+  }
+  .table-wrapper {
+    overflow-x: auto;
+  }
+  .adminmember-filter {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .adminmember-filter select {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  

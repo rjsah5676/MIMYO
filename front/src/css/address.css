@@ -1,0 +1,231 @@
+.address-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.address-form .input-field {
+    width: 100%;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'EliceDigitalBaeum';
+}
+
+.address-form .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-family: 'EliceDigitalBaeum';
+}
+
+.address-form label {
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.address-button-container button {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.address-form .button:hover {
+    background-color: #444;
+    transition: background-color 0.3s ease;
+}
+
+.address-form .cancel-button {
+    background-color: #c94946;
+}
+
+.address-form .cancel-button:hover {
+    background-color: #d36b69;
+    transition: background-color 0.3s ease;
+}
+
+.address-form .address-select {
+    width: 100%;
+    padding: 4px 8px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'EliceDigitalBaeum';
+}
+
+.address-form .add-address-button {
+    background-color: #222;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+.address-form .add-address-button:hover {
+    background-color: #444;
+    transition: background-color 0.3s ease;
+}
+
+.address-form .no-address-text {
+    font-size: 1rem;
+    color: #333;
+}
+
+.address-form .zipcode-search-button {
+    background-color: #222;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+.address-form .zipcode-search-button:hover {
+    background-color: #444;
+    transition: background-color 0.3s ease;
+}
+
+.address-form-modal {
+    margin-top:20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+}
+
+.address-form .zipcode-wrapper {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.address-form .zipcode-input {
+    width: 50%;
+}
+
+.address-form .zipcode-search-button {
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    background-color: #222;
+    color: white;
+}
+
+.address-form .zipcode-search-button:hover {
+    background-color: #444;
+    transition: background-color 0.3s ease;
+}
+
+.address-form .address-button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* 결제성공페이지 */
+.product-payment-container {
+    padding: 100px;
+    text-align: center;
+  }
+  
+  .product-payment-header {
+    margin-bottom: 30px;
+  }
+  
+  .product-payment-info {
+    margin-bottom: 40px;
+  }
+  
+  .product-payment-order-id, 
+  .product-payment-amount, 
+  .product-payment-thank-you {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .product-payment-order-id strong, 
+  .product-payment-amount strong {
+    font-weight: bold;
+  }
+  
+  .product-payment-buttons {
+    margin-top: 30px;
+  }
+  
+  .product-payment-btn {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #8CC7A5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .product-payment-btn:hover {
+    background-color: #4a7b63;
+  }
+
+/* 결제성공끝 */
+
+/* 배송지 관리 */
+.address-box{
+    padding:0 10px;
+    margin:0;
+}
+
+.mypage-address-list{
+    list-style-type: none;
+    display: flex;
+    margin:0;
+    padding:10px;
+    margin-top:10px;
+}
+
+.mypage-address-list > li{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.mypage-address-list > li:nth-child(1) {
+    width: 5%;
+}
+.mypage-address-list > li:nth-child(2) {
+    width: 10%;
+}
+.mypage-address-list > li:nth-child(3) {
+    width: 30%;
+}
+.mypage-address-list > li:nth-child(4) {
+    width: 20%;
+}
+.mypage-address-list > li:nth-child(5) {
+    width: 20%;
+}
+.mypage-address-list > li:nth-child(6) {
+    width: 10%;
+}
+.mypage-address-list > li:nth-child(7) {
+    width: 5%;
+}
+
+@media (max-width: 768px) {
+    .mypage-address-list {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,114 @@
+.my-order-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .filter-selects {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .filter-selects select {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .activity-stats {
+    margin-bottom: 40px;
+  }
+  
+  .activity-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .activity-stat-box {
+    width: 110px;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  }
+  
+  .activity-stat-box h4 {
+    margin-bottom: 8px;
+    font-size: 11px;
+    color: #444;
+  }
+  
+  .activity-stat-box p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  @media (min-width: 768px) {
+    .activity-stat-box {
+      min-width: 180px;
+    }
+    .activity-stat-box h4 {
+      font-size: 16px;
+    }
+    .activity-row {
+      flex-wrap: wrap;
+    }
+  }
+  @media (max-width: 768px) {
+    .activity-stat-box p {
+      font-size: 12px;
+    }
+    .activity-row.purchases {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .activity-row.purchases > .activity-stat-box {
+      margin: 0 auto;
+    }
+  }
+  .chart-section {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .chart-section .chart-box {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .chart-section table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .chart-section th,
+  .chart-section td {
+    padding: 8px;
+    text-align: right;
+  }
+  
+  .chart-section th {
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    font-weight: 600;
+  }
+  
+  .chart-section td {
+    border-bottom: 1px solid #eee;
+  }
+  .chart-box table td:first-child {
+    text-align: left;
+  }
+  
+  .chart-box table td:last-child {
+    text-align: left;
+  }
+  

@@ -1,0 +1,158 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* 각 항목이 .footer 높이만큼 늘어나도록 설정 */
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+  list-style: none;
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  color: #333;
+  flex-wrap: wrap;
+}
+
+.footer > li {
+  box-sizing: border-box;
+}
+
+.footer-info,
+.footer-cs,
+.footer-add-info {
+  flex: 1; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start; 
+  padding: 0 10px; 
+}
+
+/*.footer-add-info {
+  align-items: flex-end; 
+  text-align: right;
+}*/
+
+.footer-info:not(:last-child),
+.footer-cs:not(:last-child) {
+  border-right: 1px solid #eee; /* 영역 구분선 (선택 사항) */
+}
+
+.footer-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #222;
+  /*text-align: center; */
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+.footer-list li a {
+  color: #222;
+  text-decoration: none; 
+}
+
+.footer-list li a:hover {
+  text-decoration: underline;
+}
+
+.business-info-link {
+  color: #222;
+  text-decoration: underline;
+}
+
+.business-info-link:hover {
+  text-decoration: none;
+}
+
+.footer-cs .footer-list li:first-child {
+  margin-bottom: 15px;
+}
+
+.partnership-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.partnership-link:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icon {
+  margin: 0 5px;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.social-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.verify-membership, .cs-chat {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px; /* 버튼 위치 조정 */
+}
+
+.verify-membership:hover, .cs-chat:hover {
+  background-color: #eee;
+}
+
+.footer-copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  width: 100%;
+  font-size: 0.9em;
+  color: #777;
+  flex-basis: 100%;
+  margin-top: 20px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .footer {
+      flex-direction: column;
+      align-items: center;
+  }
+  .footer-info,
+  .footer-cs,
+  .footer-add-info {
+      width: 100%;
+      margin: 0 0 30px 0;
+      text-align: center;
+      align-items: center;
+      border-right: none !important; /* 작은 화면에서 구분선 제거 */
+  }
+  .footer-add-info {
+      text-align: center;
+      align-items: center;
+  }
+} 
